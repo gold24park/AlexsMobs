@@ -1,7 +1,6 @@
 package com.github.alexthe666.alexsmobs.item;
 
 import com.github.alexthe666.alexsmobs.AlexsMobs;
-import com.github.alexthe666.alexsmobs.entity.EntityCachalotEcho;
 import com.github.alexthe666.alexsmobs.message.MessageSetPupfishChunkOnClient;
 import com.github.alexthe666.alexsmobs.misc.AMPointOfInterestRegistry;
 import com.github.alexthe666.alexsmobs.misc.AMSoundRegistry;
@@ -73,7 +72,6 @@ public class ItemEcholocator extends Item {
         if (livingEntityIn.getUsedItemHand() == InteractionHand.OFF_HAND && livingEntityIn.getMainArm() == HumanoidArm.RIGHT || livingEntityIn.getUsedItemHand() == InteractionHand.MAIN_HAND && livingEntityIn.getMainArm() == HumanoidArm.LEFT) {
             left = true;
         }
-        EntityCachalotEcho whaleEcho = new EntityCachalotEcho(worldIn, livingEntityIn, !left, type == EchoType.PUPFISH);
         if (!worldIn.isClientSide && worldIn instanceof ServerLevel) {
             BlockPos playerPos = livingEntityIn.blockPosition();
             List<BlockPos> portals = getNearbyPortals(playerPos, (ServerLevel) worldIn, 128);
@@ -112,14 +110,7 @@ public class ItemEcholocator extends Item {
 
             }
             if (pos != null) {
-                double d0 = pos.getX() + 0.5F - whaleEcho.getX();
-                double d1 = pos.getY() + 0.5F - whaleEcho.getY();
-                double d2 = pos.getZ() + 0.5F - whaleEcho.getZ();
-                whaleEcho.tickCount = 15;
-                whaleEcho.shoot(d0, d1, d2, 0.4F, 0.3F);
-                worldIn.addFreshEntity(whaleEcho);
                 livingEntityIn.gameEvent(GameEvent.ITEM_INTERACT_START);
-                worldIn.playSound((Player)null, whaleEcho.getX(), whaleEcho.getY(), whaleEcho.getZ(), AMSoundRegistry.CACHALOT_WHALE_CLICK.get(), SoundSource.PLAYERS, 1.0F, 1.0F);
                 stack.hurtAndBreak(1, livingEntityIn, (player) -> {
                     player.broadcastBreakEvent(livingEntityIn.getUsedItemHand());
                 });

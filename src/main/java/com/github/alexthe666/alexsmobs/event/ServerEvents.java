@@ -20,7 +20,6 @@ import com.github.alexthe666.alexsmobs.misc.AMTagRegistry;
 import com.github.alexthe666.alexsmobs.misc.EmeraldsForItemsTrade;
 import com.github.alexthe666.alexsmobs.misc.ItemsForEmeraldsTrade;
 import com.github.alexthe666.alexsmobs.world.AMWorldData;
-import com.github.alexthe666.alexsmobs.world.BeachedCachalotWhaleSpawner;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import it.unimi.dsi.fastutil.objects.ObjectList;
 import net.minecraft.ChatFormatting;
@@ -105,16 +104,11 @@ public class ServerEvents {
     private static final UUID SNEAK_SPEED_MODIFIER = UUID.fromString("7E0292F2-9434-48D5-A29F-9583AF7DF28F");
     private static final AttributeModifier SAND_SPEED_BONUS = new AttributeModifier(SAND_SPEED_MODIFIER, "roadrunner speed bonus", 0.1F, AttributeModifier.Operation.ADDITION);
     private static final AttributeModifier SNEAK_SPEED_BONUS = new AttributeModifier(SNEAK_SPEED_MODIFIER, "frontier cap speed bonus", 0.1F, AttributeModifier.Operation.ADDITION);
-    private static final Map<ServerLevel, BeachedCachalotWhaleSpawner> BEACHED_CACHALOT_WHALE_SPAWNER_MAP = new HashMap<>();
     public static final ObjectList<Triple<ServerPlayer, ServerLevel, BlockPos>> teleportPlayers = new ObjectArrayList<>();
 
     @SubscribeEvent
     public static void onServerTick(TickEvent.LevelTickEvent tick) {
         if (!tick.level.isClientSide && tick.level instanceof ServerLevel serverWorld) {
-            BEACHED_CACHALOT_WHALE_SPAWNER_MAP.computeIfAbsent(serverWorld,
-                k -> new BeachedCachalotWhaleSpawner(serverWorld));
-            BeachedCachalotWhaleSpawner spawner = BEACHED_CACHALOT_WHALE_SPAWNER_MAP.get(serverWorld);
-            spawner.tick();
 
             if (!teleportPlayers.isEmpty()) {
                 for (final var triple : teleportPlayers) {
@@ -224,16 +218,6 @@ public class ServerEvents {
         if (event.getEntity().getType() == EntityType.SQUID && !event.getEntity().level().isClientSide) {
             ServerLevel level = (ServerLevel) event.getEntity().level();
             event.setCanceled(true);
-            EntityGiantSquid squid = AMEntityRegistry.GIANT_SQUID.get().create(level);
-            squid.moveTo(event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity().getYRot(), event.getEntity().getXRot());
-            squid.finalizeSpawn(level, level.getCurrentDifficultyAt(squid.blockPosition()), MobSpawnType.CONVERSION, null, null);
-            if (event.getEntity().hasCustomName()) {
-                squid.setCustomName(event.getEntity().getCustomName());
-                squid.setCustomNameVisible(event.getEntity().isCustomNameVisible());
-            }
-            squid.setBlue(true);
-            squid.setPersistenceRequired();
-            level.addFreshEntityWithPassengers(squid);
             event.getEntity().discard();
         }
     }

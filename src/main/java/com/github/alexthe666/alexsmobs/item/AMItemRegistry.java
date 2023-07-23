@@ -259,7 +259,6 @@ public class AMItemRegistry {
         DEF_REG.register("spawn_egg_dropbear", () -> new ForgeSpawnEggItem(AMEntityRegistry.DROPBEAR, 0X8A2D35,0X60A3A3, new Item.Properties()));
         DEF_REG.register("spawn_egg_tasmanian_devil", () -> new ForgeSpawnEggItem(AMEntityRegistry.TASMANIAN_DEVIL, 0X252426,0XA8B4BF, new Item.Properties()));
         DEF_REG.register("spawn_egg_kangaroo", () -> new ForgeSpawnEggItem(AMEntityRegistry.KANGAROO, 0XCE9D65,0XDEBDA0, new Item.Properties()));
-        DEF_REG.register("spawn_egg_cachalot_whale", () -> new ForgeSpawnEggItem(AMEntityRegistry.CACHALOT_WHALE, 0X949899,0X5F666E, new Item.Properties()));
         DEF_REG.register("spawn_egg_leafcutter_ant", () -> new ForgeSpawnEggItem(AMEntityRegistry.LEAFCUTTER_ANT, 0X964023,0XA65930, new Item.Properties()));
         DEF_REG.register("spawn_egg_enderiophage", () -> new ForgeSpawnEggItem(AMEntityRegistry.ENDERIOPHAGE, 0X872D83,0XF6E2CD, new Item.Properties()));
         DEF_REG.register("spawn_egg_bald_eagle", () -> new ForgeSpawnEggItem(AMEntityRegistry.BALD_EAGLE, 0X321F18,0XF4F4F4, new Item.Properties()));
@@ -271,7 +270,6 @@ public class AMItemRegistry {
         DEF_REG.register("spawn_egg_seagull", () -> new ForgeSpawnEggItem(AMEntityRegistry.SEAGULL, 0XC9D2DC,0XFFD850, new Item.Properties()));
         DEF_REG.register("spawn_egg_froststalker", () -> new ForgeSpawnEggItem(AMEntityRegistry.FROSTSTALKER, 0X788AC1,0XA1C3FF, new Item.Properties()));
         DEF_REG.register("spawn_egg_tusklin", () -> new ForgeSpawnEggItem(AMEntityRegistry.TUSKLIN, 0X735841,0XE8E2D5, new Item.Properties()));
-        DEF_REG.register("spawn_egg_laviathan", () -> new ForgeSpawnEggItem(AMEntityRegistry.LAVIATHAN, 0XD68356,0X3C3947, new Item.Properties()));
         DEF_REG.register("spawn_egg_cosmaw", () -> new ForgeSpawnEggItem(AMEntityRegistry.COSMAW, 0X746DBD,0XD6BFE3, new Item.Properties()));
         DEF_REG.register("spawn_egg_toucan", () -> new ForgeSpawnEggItem(AMEntityRegistry.TOUCAN, 0XF58F33,0X1E2133, new Item.Properties()));
         DEF_REG.register("spawn_egg_maned_wolf", () -> new ForgeSpawnEggItem(AMEntityRegistry.MANED_WOLF, 0XBB7A47,0X40271A, new Item.Properties()));
@@ -286,7 +284,6 @@ public class AMItemRegistry {
         DEF_REG.register("spawn_egg_cosmic_cod", () -> new ForgeSpawnEggItem(AMEntityRegistry.COSMIC_COD, 0X6985C7, 0XE2D1FF, new Item.Properties()));
         DEF_REG.register("spawn_egg_bunfungus", () -> new ForgeSpawnEggItem(AMEntityRegistry.BUNFUNGUS, 0X6F6D91, 0XC92B29, new Item.Properties()));
         DEF_REG.register("spawn_egg_bison", () -> new ForgeSpawnEggItem(AMEntityRegistry.BISON, 0X4C3A2E, 0X7A6546, new Item.Properties()));
-        DEF_REG.register("spawn_egg_giant_squid", () -> new ForgeSpawnEggItem(AMEntityRegistry.GIANT_SQUID, 0XAB4B4D, 0XD67D6B, new Item.Properties()));
         DEF_REG.register("spawn_egg_devils_hole_pupfish", () -> new ForgeSpawnEggItem(AMEntityRegistry.DEVILS_HOLE_PUPFISH, 0X567BC4, 0X6C4475, new Item.Properties()));
         DEF_REG.register("spawn_egg_catfish", () -> new ForgeSpawnEggItem(AMEntityRegistry.CATFISH, 0X807757, 0X8A7466, new Item.Properties()));
         DEF_REG.register("spawn_egg_flying_fish", () -> new ForgeSpawnEggItem(AMEntityRegistry.FLYING_FISH, 0X7BBCED, 0X6881B3, new Item.Properties()));

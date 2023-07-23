@@ -371,15 +371,8 @@ public class AMItemstackRenderer extends BlockEntityWithoutLevelRenderer {
             if (fakeEntity instanceof EntityMimicOctopus) {
                 matrixStackIn.translate(0, 0.5F, 0);
             }
-            if (fakeEntity instanceof EntityLaviathan) {
-                RenderLaviathan.renderWithoutShaking = true;
-                matrixStackIn.translate(0, 0.3F, 0);
-            }
             if (fakeEntity instanceof EntityCosmaw) {
                 matrixStackIn.translate(0, 0.2F, 0);
-            }
-            if (fakeEntity instanceof EntityGiantSquid) {
-                matrixStackIn.translate(0, 0.5F, 0.3F);
             }
             if (fakeEntity instanceof EntityUnderminer) {
                 RenderUnderminer.renderWithPickaxe = true;
@@ -404,9 +397,6 @@ public class AMItemstackRenderer extends BlockEntityWithoutLevelRenderer {
                 } catch (Exception e) {
 
                 }
-            }
-            if (fakeEntity instanceof EntityLaviathan) {
-                RenderLaviathan.renderWithoutShaking = false;
             }
             if (fakeEntity instanceof EntityUnderminer) {
                 RenderUnderminer.renderWithPickaxe = false;

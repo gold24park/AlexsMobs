@@ -446,19 +446,6 @@ public class EntityCrimsonMosquito extends Monster {
                     this.setFleeingEntityId(-1);
                 }
             }
-            if (hasLuringLaviathan()) {
-                this.setTarget(null);
-                this.setLastHurtByMob(null);
-                final Entity entity = this.level().getEntity(this.getLuringLaviathan());
-                if (entity instanceof EntityLaviathan && ((EntityLaviathan) entity).isChilling()) {
-                    Vec3 vec = ((EntityLaviathan) entity).getLureMosquitoPos();
-                    this.setFlying(true);
-                    this.lookAt(entity, 10, 10);
-                    this.getMoveControl().setWantedPosition(vec.x, vec.y, vec.z, 0.7F);
-                } else {
-                    this.setLuringLaviathan(-1);
-                }
-            }
         }
         if (this.flyProgress == 0 && random.nextInt(200) == 0) {
             randomWingFlapTick = 5 + random.nextInt(15);

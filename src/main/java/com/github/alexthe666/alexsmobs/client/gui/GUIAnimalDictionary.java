@@ -1,6 +1,5 @@
 package com.github.alexthe666.alexsmobs.client.gui;
 
-import com.github.alexthe666.alexsmobs.client.render.RenderLaviathan;
 import com.github.alexthe666.alexsmobs.client.render.RenderMurmurBody;
 import com.github.alexthe666.alexsmobs.client.render.RenderUnderminer;
 import com.github.alexthe666.citadel.client.gui.GuiBasicBook;
@@ -27,11 +26,9 @@ public class GUIAnimalDictionary extends GuiBasicBook {
     }
 
     public void render(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-        RenderLaviathan.renderWithoutShaking = true;
         RenderMurmurBody.renderWithHead = true;
         RenderUnderminer.renderWithPickaxe = true;
         super.render(guiGraphics, x, y, partialTicks);
-        RenderLaviathan.renderWithoutShaking = false;
         RenderMurmurBody.renderWithHead = false;
         RenderUnderminer.renderWithPickaxe = false;
     }

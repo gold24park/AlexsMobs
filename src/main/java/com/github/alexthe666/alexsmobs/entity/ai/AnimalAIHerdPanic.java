@@ -1,6 +1,5 @@
 package com.github.alexthe666.alexsmobs.entity.ai;
 
-import com.github.alexthe666.alexsmobs.entity.EntityLaviathan;
 import com.github.alexthe666.alexsmobs.entity.IHerdPanic;
 import com.google.common.base.Predicate;
 import net.minecraft.core.BlockPos;
@@ -69,11 +68,7 @@ public class AnimalAIHerdPanic extends Goal {
 
     private boolean findRandomPositionFrom(LivingEntity revengeTarget) {
         Vec3 vector3d;
-        if(this.creature instanceof EntityLaviathan){
-            vector3d = DefaultRandomPos.getPosAway(this.creature, 32, 16, revengeTarget.position());
-        }else{
-            vector3d = LandRandomPos.getPosAway(this.creature, 16, 7, revengeTarget.position());
-        }
+        vector3d = LandRandomPos.getPosAway(this.creature, 16, 7, revengeTarget.position());
         if (vector3d == null) {
             return false;
         } else {

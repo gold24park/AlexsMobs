@@ -162,8 +162,6 @@ public class ClientProxy extends CommonProxy {
         EntityRenderers.register(AMEntityRegistry.DROPBEAR.get(), RenderDropBear::new);
         EntityRenderers.register(AMEntityRegistry.TASMANIAN_DEVIL.get(), RenderTasmanianDevil::new);
         EntityRenderers.register(AMEntityRegistry.KANGAROO.get(), RenderKangaroo::new);
-        EntityRenderers.register(AMEntityRegistry.CACHALOT_WHALE.get(), RenderCachalotWhale::new);
-        EntityRenderers.register(AMEntityRegistry.CACHALOT_ECHO.get(), RenderCachalotEcho::new);
         EntityRenderers.register(AMEntityRegistry.LEAFCUTTER_ANT.get(), RenderLeafcutterAnt::new);
         EntityRenderers.register(AMEntityRegistry.ENDERIOPHAGE.get(), RenderEnderiophage::new);
         EntityRenderers.register(AMEntityRegistry.ENDERIOPHAGE_ROCKET.get(), (render) -> {
@@ -182,7 +180,6 @@ public class ClientProxy extends CommonProxy {
         EntityRenderers.register(AMEntityRegistry.FROSTSTALKER.get(), RenderFroststalker::new);
         EntityRenderers.register(AMEntityRegistry.ICE_SHARD.get(), RenderIceShard::new);
         EntityRenderers.register(AMEntityRegistry.TUSKLIN.get(), RenderTusklin::new);
-        EntityRenderers.register(AMEntityRegistry.LAVIATHAN.get(), RenderLaviathan::new);
         EntityRenderers.register(AMEntityRegistry.COSMAW.get(), RenderCosmaw::new);
         EntityRenderers.register(AMEntityRegistry.TOUCAN.get(), RenderToucan::new);
         EntityRenderers.register(AMEntityRegistry.MANED_WOLF.get(), RenderManedWolf::new);
@@ -200,7 +197,6 @@ public class ClientProxy extends CommonProxy {
         EntityRenderers.register(AMEntityRegistry.COSMIC_COD.get(), RenderCosmicCod::new);
         EntityRenderers.register(AMEntityRegistry.BUNFUNGUS.get(), RenderBunfungus::new);
         EntityRenderers.register(AMEntityRegistry.BISON.get(), RenderBison::new);
-        EntityRenderers.register(AMEntityRegistry.GIANT_SQUID.get(), RenderGiantSquid::new);
         EntityRenderers.register(AMEntityRegistry.SQUID_GRAPPLE.get(), RenderSquidGrapple::new);
         EntityRenderers.register(AMEntityRegistry.SEA_BEAR.get(), RenderSeaBear::new);
         EntityRenderers.register(AMEntityRegistry.DEVILS_HOLE_PUPFISH.get(), RenderDevilsHolePupfish::new);
